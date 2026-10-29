@@ -7,15 +7,15 @@ class TratamientoController
     public Tratamiento $modelo;
 
     public array $campos = [
-        'diagnostico_id' => 'diagnosticos',
-        'medicamento' => 'text',
+        'cliente_id' => 'clientes',
+        'nombre' => 'text',
         'indicaciones' => 'textarea',
         'fecha_inicio' => 'date',
         'fecha_fin' => 'date',
         'costo' => 'number',
     ];
 
-    public string $titulo = 'Tratamientos';
+    public string $titulo = 'Tratamientos estéticos';
 
     public function __construct()
     {

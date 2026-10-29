@@ -4,20 +4,20 @@ exigirSesion();
 require __DIR__ . '/layout.php';
 
 $imagenes = [
-    'duenos' => 'photo-1558788353-f76d92427f16',
-    'veterinarios' => 'photo-1576091160399-112ba8d25d1d',
-    'mascotas' => 'photo-1583511655857-d19b40a7a54e',
-    'servicios' => 'photo-1516734212186-a967f81ad0d7',
-    'citas' => 'photo-1517849845537-4d257902454a',
-    'diagnosticos' => 'photo-1576200419199-391ae4be7a41',
-    'tratamientos' => 'photo-1559757148-5c350d0d3c56',
+    'clientes' => 'photo-1524504388940-b1c1722653e1',
+    'especialistas' => 'photo-1522335789203-aabd1fc54bc9',
+    'productos' => 'photo-1608248543803-ba4f8c70ae0b',
+    'servicios' => 'photo-1487412947147-5cebf100ffc2',
+    'citas' => 'photo-1521737711867-e3b97375f902',
+    'atenciones' => 'photo-1600334129128-685c5582fd35',
+    'tratamientos' => 'photo-1570172619644-dfd03ed5d881',
     'pagos' => 'photo-1556742049-0cfed4f6a45d',
-    'reportes' => 'photo-1456513080510-7bf3a84b82f8',
+    'reportes' => 'photo-1556761175-b413da4baf72',
 ];
 
 layoutStart('Panel de control');
 ?>
-<p>Administra la atención, el historial clínico, los servicios y los pagos.</p>
+<p>Organiza las reservas, el equipo, los servicios, las atenciones y los pagos de Bella Imagen.</p>
 <div class="cards">
     <?php foreach (modulos() as $id => $modulo): ?>
         <a class="card" href="<?= e($modulo['url']) ?>">

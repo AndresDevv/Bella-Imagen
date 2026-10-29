@@ -51,11 +51,11 @@ function notificar(string $mensaje): void
 function validarDatos(array $campos, array $datos): array
 {
     $salida = [];
-    $referencias = ['duenos', 'mascotas', 'veterinarios', 'servicios', 'citas', 'diagnosticos'];
+    $referencias = ['clientes', 'especialistas', 'servicios', 'productos', 'citas', 'atenciones'];
     $opciones = [
         'estado_cita' => ['pendiente', 'confirmada', 'atendida', 'cancelada'],
         'estado_pago' => ['pendiente', 'pagado', 'anulado'],
-        'metodo_pago' => ['contado', 'tarjeta_credito', 'tarjeta_debito', 'yape'],
+        'metodo_pago' => ['efectivo', 'tarjeta_credito', 'tarjeta_debito', 'yape'],
     ];
 
     foreach ($campos as $campo => $tipo) {
@@ -101,14 +101,14 @@ function validarDatos(array $campos, array $datos): array
 function modulos(): array
 {
     return [
-        'duenos' => ['nombre' => 'Dueños', 'url' => 'duenos.php'],
-        'veterinarios' => ['nombre' => 'Veterinarios', 'url' => 'veterinarios.php'],
-        'mascotas' => ['nombre' => 'Mascotas', 'url' => 'mascotas.php'],
-        'servicios' => ['nombre' => 'Servicios', 'url' => 'servicios.php'],
-        'citas' => ['nombre' => 'Citas veterinarias', 'url' => 'citas.php'],
-        'diagnosticos' => ['nombre' => 'Diagnósticos', 'url' => 'diagnosticos.php'],
-        'tratamientos' => ['nombre' => 'Tratamientos', 'url' => 'tratamientos.php'],
+        'clientes' => ['nombre' => 'Clientes', 'url' => 'clientes.php'],
+        'especialistas' => ['nombre' => 'Especialistas', 'url' => 'especialistas.php'],
+        'productos' => ['nombre' => 'Productos e inventario', 'url' => 'productos.php'],
+        'servicios' => ['nombre' => 'Servicios y precios', 'url' => 'servicios.php'],
+        'citas' => ['nombre' => 'Citas', 'url' => 'citas.php'],
+        'atenciones' => ['nombre' => 'Atenciones', 'url' => 'atenciones.php'],
+        'tratamientos' => ['nombre' => 'Tratamientos estéticos', 'url' => 'tratamientos.php'],
         'pagos' => ['nombre' => 'Pagos', 'url' => 'pagos.php'],
-        'reportes' => ['nombre' => 'Reportes clínicos', 'url' => 'reportes.php'],
+        'reportes' => ['nombre' => 'Reportes', 'url' => 'reportes.php'],
     ];
 }

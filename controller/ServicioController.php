@@ -8,6 +8,7 @@ class ServicioController
 
     public array $campos = [
         'nombre' => 'text',
+        'categoria' => 'text',
         'descripcion' => 'textarea',
         'precio' => 'number',
         'duracion_min' => 'number',

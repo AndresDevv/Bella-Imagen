@@ -1,9 +1,9 @@
 <?php
-// Configuración de MySQL. Este es el único archivo dentro de config.
+// Configuración de MySQL para Bella Imagen.
 class Database
 {
     private string $host = 'localhost';
-    private string $name = 'veterinaria_db';
+    private string $name = 'bella_imagen_db';
     private string $user = 'root';
     private string $password = '';
 

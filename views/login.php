@@ -32,12 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VetCare | Acceso</title>
-    <link rel="stylesheet" href="../assetes/css/vet.css">
+    <title>Bella Imagen | Acceso</title>
+    <link rel="stylesheet" href="../assets/css/bella-imagen.css">
 </head>
 <body class="auth">
     <div class="auth-box">
-        <div class="brand">🐾 VetCare <small>Gestión veterinaria</small></div>
+        <div class="brand">✦ Bella Imagen <small>Gestión de estética y belleza</small></div>
         <h2>Bienvenido</h2>
 
         <?php if ($error !== ''): ?>

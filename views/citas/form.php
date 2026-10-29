@@ -6,10 +6,10 @@
         <label>
             <?= e(ucwords(str_replace('_', ' ', $campo))) ?>
 
-            <?php if (in_array($tipo, ['duenos', 'mascotas', 'veterinarios', 'servicios', 'citas', 'diagnosticos'], true)): ?>
+            <?php if (in_array($tipo, ['clientes', 'especialistas', 'servicios', 'productos', 'citas', 'atenciones'], true)): ?>
                 <?php
                 $tabla = $tipo;
-                $columna = in_array($tipo, ['citas', 'diagnosticos'], true) ? 'id' : 'nombre';
+                $columna = in_array($tipo, ['citas', 'atenciones'], true) ? 'id' : 'nombre';
                 $opciones = db()->query(
                     "SELECT id, `$columna` AS etiqueta FROM `$tabla` ORDER BY id DESC LIMIT 500"
                 )->fetchAll();
@@ -31,7 +31,7 @@
                 $opciones = [
                     'estado_cita' => ['pendiente', 'confirmada', 'atendida', 'cancelada'],
                     'estado_pago' => ['pendiente', 'pagado', 'anulado'],
-                    'metodo_pago' => ['contado', 'tarjeta_credito', 'tarjeta_debito', 'yape'],
+                    'metodo_pago' => ['efectivo', 'tarjeta_credito', 'tarjeta_debito', 'yape'],
                 ][$tipo];
                 ?>
                 <select name="<?= e($campo) ?>">
